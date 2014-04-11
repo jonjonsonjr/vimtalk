@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vim</title>
+
+        <link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="reveal.js/css/theme/simple.css">
+        <link rel="stylesheet" href="css/tables.css">
+
+        <style>
+            .table th {
+                font-weight: bold;
+            }
+
+            .table th,
+            .table td {
+                font-size: 0.6em;
+            }
+
+            .table.zoomed th,
+            .table.zoomed td {
+                font-size: 1.0em;
+            }
+
+            code.big-code {
+                font-size: 1.5em;
+            }
+        </style>
+
+        <!--[if lt IE 9]>
+        <script src="http://barkleyus.github.io/showmetech/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Vim 101</h1>
+                    <h3>Jon Johnson</h3>
+                </section>
+
+                <section>
+                    <h1>$ vimtutor</h1>
+                </section>
+
+                <section>
+                    <h2>Normal Mode</h2>
+                    <p>Moving around the document</p>
+                </section>
+                <section>
+                    <h2>Insert Mode</h2>
+                    <p>Only when typing</p>
+                </section>
+                <section>
+                    <h2>Visual Mode</h2>
+                    <p>Selecting text</p>
+                </section>
+
+                <section>
+                    <img src="img/keyboard.jpg" alt="Muscle Memory">
+                </section>
+
+                <section>
+                  <section>
+                      <h2>Movement</h2>
+                      <table class="table zoomed">
+                          <tr>
+                              <th><code>h, j, k, l</code></th>
+                              <td>left, down, up, right</td>
+                          </tr>
+                          <tr>
+                              <th><code>w</code></th>
+                              <td>word</td>
+                          </tr>
+                          <tr>
+                              <th><code>b</code></th>
+                              <td>back</td>
+                          </tr>
+                          <tr>
+                              <th><code>e</code></th>
+                              <td>end (of word)</td>
+                          </tr>
+                          <tr>
+                              <th><code>$</code></th>
+                              <td>end of line</td>
+                          </tr>
+                          <tr>
+                              <th><code>^</code></th>
+                              <td>beginning of line</td>
+                          </tr>
+                          <tr>
+                              <th><code>f{char}</code></th>
+                              <td>forward to {char}</td>
+                          </tr>
+                          <tr>
+                              <th><code>t{char}</code></th>
+                              <td>forward up to {char}</td>
+                          </tr>
+                      </table>
+                  </section>
+                  <section>
+                      <h2>Movement</h2>
+                      <table class="table zoomed">
+                          <tr>
+                              <th><code>gg</code></th>
+                              <td>top of file</td>
+                          </tr>
+                          <tr>
+                              <th><code>G</code></th>
+                              <td>bottom of file</td>
+                          </tr>
+                          <tr>
+                              <th><code>{number}G</code></th>
+                              <td>go to that line</td>
+                          </tr>
+                          <tr>
+                              <th><code>Shift + H/M/L</code></th>
+                              <td>move around the screen (high/middle/low)</td>
+                          </tr>
+                      </table>
+                  </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Verbs</h3>
+                        <table class="table zoomed">
+                            <tr>
+                                <th>Character</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <th><code>c</code></th>
+                                <td>change</td>
+                            </tr>
+                            <tr>
+                                <th><code>d</code></th>
+                                <td>delete</td>
+                            </tr>
+                            <tr>
+                                <th><code>v</code></th>
+                                <td>visually select</td>
+                            </tr>
+                            <tr>
+                                <th><code>y</code></th>
+                                <td>yank (copy)</td>
+                            </tr>
+                            <tr>
+                                <th><code>p</code></th>
+                                <td>put (paste)</td>
+                            </tr>
+                            <tr>
+                                <th><code>.</code></th>
+                                <td>repeat</td>
+                            </tr>
+                            <tr>
+                                <th><code>u</code></th>
+                                <td>undo</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>More verbs</h3>
+                        <table class="table zoomed">
+                            <tr>
+                                <th>Character</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <th><code>a</code></th>
+                                <td>append</td>
+                            </tr>
+                            <tr>
+                                <th><code>s</code></th>
+                                <td>substitute</td>
+                            </tr>
+                            <tr>
+                                <th><code>x</code></th>
+                                <td>delete character</td>
+                            </tr>
+                            <tr>
+                                <th><code>r</code></th>
+                                <td>replace character</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Shortcuts</h3>
+                        <table class="table zoomed">
+                            <tr>
+                                <th>Character</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <th><code>A ($a)</code></th>
+                                <td>append at the end of the line</td>
+                            </tr>
+                            <tr>
+                                <th><code>I (^i)</code></th>
+                                <td>insert at the beginning of the line</td>
+                            </tr>
+                            <tr>
+                                <th><code>C (c$)</code></th>
+                                <td>change till the end of the line</td>
+                            </tr>
+                            <tr>
+                                <th><code>D (d$)</code></th>
+                                <td>delete to the end of the line</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Putting It Together</h3>
+                    <table class="table zoomed">
+                        <tr>
+                            <th>Keystrokes</th>
+                            <th>Translation</th>
+                        </tr>
+                        <tr>
+                            <th><code>d$</code></th>
+                            <td>delete to the end of the line</td>
+                        </tr>
+                        <tr>
+                            <th><code>ciw</code></th>
+                            <td>change inside word</td>
+                        </tr>
+                        <tr>
+                            <th><code>d3w</code></th>
+                            <td>delete 3 words</td>
+                        </tr>
+                        <tr>
+                            <th><code>ci"</code></th>
+                            <td>change inside quotes</td>
+                        </tr>
+                        <tr>
+                            <th><code>5p</code></th>
+                            <td>put yanked text into buffer 5 times</td>
+                        </tr>
+                        <tr>
+                            <th><code>3dd</code></th>
+                            <td>delete current line three times</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h2>Searching</h2>
+                    <table class="table zoomed">
+                        <tr>
+                            <th>/</th>
+                            <td>search for text</td>
+                        </tr>
+                        <tr>
+                            <th>n, N</th>
+                            <td>go to next/previous result</td>
+                        </tr>
+                        <tr>
+                            <th>*</th>
+                            <td>search for this word</td>
+                        </tr>
+                        <tr>
+                            <th>:%s/[find]/[replace]/gc</th>
+                            <td>subsitute [find] with [replace]</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2>:commands</h2>
+                    <table class="table zoomed">
+                        <tr>
+                            <th>Command</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <th><code>:w [file]</code></th>
+                            <td>write to [file]</td>
+                        </tr>
+                        <tr>
+                            <th><code>:e [file]</code></th>
+                            <td>edit [file]</td>
+                        </tr>
+                        <tr>
+                            <th><code>:sp [file]</code></th>
+                            <td>open [file] in split window</td>
+                        </tr>
+                        <tr>
+                            <th><code>:vs [file]</code></th>
+                            <td>open [file] in vertically split window</td>
+                        </tr>
+                        <tr>
+                            <th><code>:tabedit [file]</code></th>
+                            <td>open [file] in a new tab</td>
+                        </tr>
+                        <tr>
+                            <th><code>:!mkdir foo</code></th>
+                            <td>run stuff in your shell</td>
+                        </tr>
+                        <tr>
+                            <th><code>:make</code></th>
+                            <td>run your makefile</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2>Macros</h2>
+                    <table class="table zoomed">
+                        <tr>
+                            <th><code>qa[keystrokes]q</code></th>
+                            <td>save keystrokes to "a"</td>
+                        </tr>
+                        <tr>
+                            <th><code>3@a</code></th>
+                            <td>replay the keystrokes in "a" 3 times</td>
+                        </tr>
+                        <tr>
+                            <th><code>@@</code></th>
+                            <td>replay last macro</td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2>Misc</h2>
+                    <table class="table zoomed">
+                        <tr>
+                            <th><code>zz</code></th>
+                            <td>center screen on cursor</td>
+                        </tr>
+                        <tr>
+                            <th><code>o, O</code></th>
+                            <td>new line below (or above) cursor, insert mode</td>
+                        </tr>
+                        <tr>
+                            <th><code>J</code></th>
+                            <td>join this line with the one below it</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+
+        </div>
+
+        <script src="reveal.js/lib/js/head.min.js"></script>
+        <script src="reveal.js/js/reveal.min.js"></script>
+        <script src="reveal.js/defaults.js"></script>
+    </body>
+</html>
