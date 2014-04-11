@@ -1,1 +1,1 @@
-[Demo](https://jonjonsonjr.github.io/vimtalk)
+[Slides](https://jonjonsonjr.github.io/vimtalk)
