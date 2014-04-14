@@ -1,6 +1,6 @@
 # Vim Talk
 
-Introudction to Vim talk I gave at [AppHack 1](http://cs.appstate.edu/apphack/) on April 11, 2014.
+Introduction to Vim talk I gave at [AppHack 1](http://cs.appstate.edu/apphack/) on April 11, 2014.
 
 [Slides here](https://jonjonsonjr.github.io/vimtalk)
 
