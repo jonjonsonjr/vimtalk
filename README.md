@@ -6,6 +6,7 @@ Introduction to Vim talk I gave at [AppHack 1](http://cs.appstate.edu/apphack/) 
 
 ## Sources and Inspiration
 
+- [Vim Creep](http://www.norfolkwinters.com/vim-creep/)
 - [Efficient Text Editing in Vim](https://www.youtube.com/watch?v=xGqUTtYWAXc)
 - [Vim Tutorial Screencasts](http://derekwyatt.org/vim/tutorials/)
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
